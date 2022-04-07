@@ -12,7 +12,7 @@ export const ReservationScreen = () => {
         }
       }>Superheroes reservados</h1>
 
-      <div className='col-7'>
+      <div className='col-8'>
           <h4>Resultados</h4>
           <hr />
 

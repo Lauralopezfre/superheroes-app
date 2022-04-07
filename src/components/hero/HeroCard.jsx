@@ -22,7 +22,7 @@ export const HeroCard = (hero) => {
                             </p>
 
                             <p className='card-text'>
-                                <small className='text-muted'>{hero.gender}</small>
+                                <small className='text-muted'>{hero.appearance.gender} | {hero.appearance.race}</small>
                             </p>
                             
                             <Link to="/reservations" onClick={() => {

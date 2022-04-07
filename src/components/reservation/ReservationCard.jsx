@@ -13,36 +13,54 @@ export const ReservationCard = (hero) => {
     }
 
     return (
-        <div className='col'>
+        <div className='col'
+        style={{
+            margin: 30,
+        }}>
             <div className='card'>
                 <div className='row no-gutters'>
+
                     <div className='col-4'>
                         <img src={`${hero.images.sm}`} className='card-img-top' alt={hero.name} />
                     </div>
+
                     <div className='col-8'>
                         <div className='card-body'>
-                            <h5 className='card-tittle'>
+
+                            <h5 className='card-tittle'
+                                style={{
+                                    fontSize: 27,
+                                    display:'grid',
+                                    gridTemplateColumns: '1fr 1fr',
+                                }}>
                                 {hero.name}
+                                <p class="fw-lighter">{hero.biography.publisher}</p>
                             </h5>
+
                             <p className='card-text'>
                                 {hero.slug}
                             </p>
 
                             <p className='card-text'>
-                                <small className='text-muted'>{hero.gender}</small>
+                                <small className='text-muted'>{hero.appearance.gender} | {hero.appearance.race}</small>
                             </p>
+
+                            <p class="fw-lighter">{hero.biography.placeOfBirth}</p>
+                            <p class="fw-lighter">{hero.biography.fullName}</p>
 
 
                             <button 
                                 onClick={handleRemove}
-                                className="btn btn-outline-success">
+                                className="btn btn-outline-success"
+                                style={{
+                                    position: 'absolute',
+                                    bottom: 5,
+                                    marginBottom: 20
+                                }}>
                                 Eliminar
                             </button>
-
                         </div>
                     </div>
-                    
-                    
                 </div>
             </div>
             
